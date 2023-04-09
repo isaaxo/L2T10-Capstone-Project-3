@@ -15,7 +15,6 @@ class Shoe:
         while True:
             try:
                 with open(Shoe.data_file_txt, 'r') as inventory_file:
-
                     # Lists
                     shoe_code_list = []
                     shoe_quantity = []
@@ -78,7 +77,6 @@ class Shoe:
                     print(
                         f"{five_product_types_list[highest_quantity_index]} has {highest_quantity} units, it's now on "
                         f"SALE!!! \n")
-
                     break
 
             except FileNotFoundError:
@@ -128,7 +126,6 @@ class Shoe:
                     # Printing out the results in a table format
                     print(tabulate(formatted_data, headers=headers, showindex=range(1, len(contents[1:]) + 2),
                                    tablefmt='fancy grid'))
-
                     break
 
             except FileNotFoundError:
